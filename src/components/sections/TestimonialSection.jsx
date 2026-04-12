@@ -75,7 +75,7 @@ const reviews = [
 
 const TestimonialSection = () => {
   return (
-    <div className="py-16 md:py-24">
+    <div id="reviews" className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="Customer Reviews"

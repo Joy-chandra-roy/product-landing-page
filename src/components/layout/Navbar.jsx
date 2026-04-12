@@ -2,7 +2,13 @@ import { Menu, X } from "lucide-react";
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const navItems = ["Features", "Benefits", "Reviews", "Pricing", "FAQ"];
+  const navItems = [
+  { name: "Features", id: "features" },
+  { name: "Benefits", id: "benefits" },
+  { name: "Reviews", id: "reviews" },
+  { name: "Pricing", id: "pricing" },
+  { name: "FAQ", id: "faq" },
+];
   const [active, setActive] = useState("");
   const [open, setOpen] = useState(false);
 
@@ -21,17 +27,16 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
               <a
-                href=""
+               href={`#${item.id}`}
                 key={index}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActive(item);
+                onClick={() => {
+                  setActive(item.name);
                 }}
                 className={`text-sm font-medium transition-colors duration-300 ${
-                  active === item ? "text-blue-500" : "hover:text-purple-500"
+                  active === item.name ? "text-blue-500" : "hover:text-purple-500"
                 }`}
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </nav>
@@ -53,12 +58,12 @@ const Navbar = () => {
               <div className="flex flex-col gap-3">
                 {navItems.map((item, index) => (
                   <a
-                    href=""
+                     href={`#${item.id}`}
                     key={index}
                     className="px-3 py-2 text-md font-medium"
                     onClick={() => setOpen(false)}
                   >
-                    {item}
+                    {item.name}
                   </a>
                 ))}
                 <button className="bg-gradient-to-r from-purple-400 to-blue-500 text-white px-3 py-2 rounded-full shadow-xl shadow-purple-400/30 cursor-pointer hover:opacity-80">
