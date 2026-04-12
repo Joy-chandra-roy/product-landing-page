@@ -8,6 +8,7 @@ import BenefitSection from '../components/sections/BenefitSection';
 import TestimonialSection from '../components/sections/TestimonialSection';
 import PricingSection from '../components/sections/PricingSection';
 import QuestionSection from '../components/sections/QuestionSection';
+import CallToAction from '../components/sections/CallToAction';
 
 const Home = () => {
     return (
@@ -21,6 +22,7 @@ const Home = () => {
                 <TestimonialSection/>
                 <PricingSection/>
                 <QuestionSection/>
+                <CallToAction/>
             </div>
             <Footer/>
         </div>
