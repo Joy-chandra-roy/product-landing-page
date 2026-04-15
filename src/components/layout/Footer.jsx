@@ -11,7 +11,13 @@ const Footer = () => {
                 { icon: FaYoutube, href: "#" },
               ]
 
-  const navItems=["Features", "Benefits", "Reviews", "Pricing", "FAQ"]
+  const navItems = [
+  { name: "Features", id: "features" },
+  { name: "Benefits", id: "benefits" },
+  { name: "Reviews", id: "reviews" },
+  { name: "Pricing", id: "pricing" },
+  { name: "FAQ", id: "faq" },
+];
 
   const serviceItems=[
                 "Premium Sound Experience",
@@ -73,10 +79,10 @@ const Footer = () => {
                 (item, index) => (
                   <li key={index}>
                     <a
-                      href="#"
+                       href={`#${item.id}`}
                       className="transition-colors duration-300 hover:text-blue-600"
                     >
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 )
