@@ -123,7 +123,7 @@ const Footer = () => {
 
               <div className="flex items-center gap-3">
                 <Phone className="text-blue-600" size={18} />
-                <p>+880 1761604702</p>
+                <p>+ 123 456 789</p>
               </div>
 
               <div className="flex items-center gap-3">
